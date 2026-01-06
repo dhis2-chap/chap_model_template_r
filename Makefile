@@ -8,7 +8,7 @@ all: help
 
 # Run the complete pipeline (train + predict)
 .PHONY: run
-run:
+run: pull
 	$(DOCKER_RUN) Rscript isolated_run.r
 
 # Train the model
