@@ -3,7 +3,7 @@ options(warn=1)  # Show warnings when running through CHAP
 library(readr)
 
 train_chap <- function(csv_fn, model_fn) {
-  df <- read_csv(csv_fn)
+  df <- read_csv(csv_fn, show_col_types = FALSE)
   #write code to train your model, and save the trained model to model_fn
 }
 
