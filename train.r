@@ -1,3 +1,5 @@
+options(warn=1)  # Show warnings when running through CHAP
+
 library(readr)  # For reading CSV files
 library(tools)  # For file operations like saving the model
 
