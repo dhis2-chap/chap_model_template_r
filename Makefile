@@ -1,6 +1,6 @@
 # Docker image configuration
-IMAGE := ghcr.io/mortenoh/r-docker-images/my-r-base:latest
-DOCKER_RUN := docker run --rm -v $(PWD):/app -w /app $(IMAGE)
+IMAGE := ghcr.io/mortenoh/r-docker-images/my-r-inla:latest
+DOCKER_RUN := docker run --rm --platform linux/amd64 -v $(PWD):/app -w /app $(IMAGE)
 
 # Default target
 .PHONY: all
@@ -29,7 +29,7 @@ clean:
 # Pull the Docker image
 .PHONY: pull
 pull:
-	docker pull $(IMAGE)
+	docker pull --platform linux/amd64 $(IMAGE)
 
 # Show help
 .PHONY: help

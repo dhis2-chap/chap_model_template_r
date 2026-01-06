@@ -1,7 +1,6 @@
 options(warn=1)  # Show warnings when running through CHAP
 
-library(readr)  # For reading CSV files
-library(tools)  # For file operations like saving the model
+library(readr)
 
 train_chap <- function(csv_fn, model_fn) {
   df <- read_csv(csv_fn)
